@@ -37,14 +37,14 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "HeimrichHannot\\LightboxGallery\\Test\\": "tests/"
+      "HeimrichHannot\\LightboxGalleryBundle\\Test\\": "tests/"
     }
   },
   "config": {
     "preferred-install": "dist"
   },
   "extra": {
-    "contao-manager-plugin": "HeimrichHannot\\LightboxGallery\\ContaoManager\\Plugin",
+    "contao-manager-plugin": "HeimrichHannot\\LightboxGalleryBundle\\ContaoManager\\Plugin",
     "foxy": true
   },
   "suggest": {
