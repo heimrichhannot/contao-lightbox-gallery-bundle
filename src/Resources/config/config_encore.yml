@@ -1,0 +1,7 @@
+huh:
+    encore:
+        entries:
+            - { name: contao-lightbox-gallery-bundle, file: 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/src/Resources/public/js/contao-lightbox-gallery-bundle.es6.js', requiresCss: true }
+        legacy:
+            js:
+              - lightbox-gallery

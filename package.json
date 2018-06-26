@@ -1,0 +1,7 @@
+{
+  "name": "contao-lightbox-gallery-bundle",
+  "version": "1.0.0",
+  "dependencies": {
+    "glightbox": "^1.0.6"
+  }
+}
