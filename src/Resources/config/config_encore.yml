@@ -5,3 +5,6 @@ huh:
         legacy:
             js:
               - lightbox-gallery
+              - mcstudios-glightbox
+            css:
+              - lightbox-gallery

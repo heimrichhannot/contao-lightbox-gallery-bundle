@@ -1,10 +1,8 @@
-let GLightbox = require('glightbox');
+import GLightbox from 'glightbox';
 
 let umbrella = require('umbrellajs');
 
 let u = umbrella.u;
-
-require('../scss/contao-lightbox-gallery-bundle.scss');
 
 ($ => {
     let lightboxGallery = {
@@ -17,7 +15,8 @@ require('../scss/contao-lightbox-gallery-bundle.scss');
 
                 let current = this;
                 let gallery = [];
-                let slides = document.querySelectorAll('[data-lightbox="' + current.dataset.lightbox + '"]');
+                let slides = document.querySelectorAll('[data-lightbox="' +
+                    current.dataset.lightbox + '"]');
                 let index = [].slice.call(slides).indexOf(current);
                 let startAt = index > -1 ? index : 0;
 

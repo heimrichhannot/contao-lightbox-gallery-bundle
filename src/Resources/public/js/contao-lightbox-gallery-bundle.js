@@ -9,7 +9,8 @@
 
                 var current = this;
                 var gallery = [];
-                var slides = document.querySelectorAll('[data-lightbox="' + current.dataset.lightbox + '"]');
+                var slides = document.querySelectorAll('[data-lightbox="' +
+                    current.dataset.lightbox + '"]');
                 var index = [].slice.call(slides).indexOf(current);
                 var startAt = index > -1 ? index : 0;
 

@@ -1,13 +1,14 @@
 {
   "name": "heimrichhannot/contao-lightbox-gallery-bundle",
   "type": "contao-bundle",
-  "description": "This bundle offers a contao extension for lightbox-gallery",
+  "description": "This bundle offers a contao extension for lightbox-gallery based on mcstudios/glightbox",
   "license": "LGPL-3.0-or-later",
   "require": {
     "php": "^7.1",
     "contao/core-bundle": "^4.4",
     "symfony/framework-bundle": "^3.4",
-    "heimrichhannot/contao-utils-bundle": "^2.4"
+    "heimrichhannot/contao-utils-bundle": "^2.4",
+    "mcstudios/glightbox": "^1.0"
   },
   "require-dev": {
     "contao/test-case": "^1.1",
