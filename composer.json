@@ -8,7 +8,7 @@
     "contao/core-bundle": "^4.4",
     "symfony/framework-bundle": "^3.4",
     "heimrichhannot/contao-utils-bundle": "^2.4",
-    "mcstudios/glightbox": "^1.0"
+    "heimrichhannot-contao-components/glightbox-gallery": "dev-master"
   },
   "require-dev": {
     "contao/test-case": "^1.1",
