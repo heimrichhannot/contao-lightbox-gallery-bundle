@@ -1,5 +1,7 @@
 import GLightbox from 'glightbox';
 
+require('../scss/contao-lightbox-gallery-bundle.scss');
+
 let umbrella = require('umbrellajs');
 
 let u = umbrella.u;
@@ -13,6 +15,7 @@ let u = umbrella.u;
             $(links).on('click', function(e) {
                 e.preventDefault();
 
+                console.log('test');
                 let current = this;
                 let gallery = [];
                 let slides = document.querySelectorAll('[data-lightbox="' +
