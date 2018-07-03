@@ -15,7 +15,6 @@ let u = umbrella.u;
             $(links).on('click', function(e) {
                 e.preventDefault();
 
-                console.log('test');
                 let current = this;
                 let gallery = [];
                 let slides = document.querySelectorAll('[data-lightbox="' +
