@@ -1,10 +1,10 @@
 huh:
-    encore:
-        entries:
-            - { name: contao-lightbox-gallery-bundle, file: 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/src/Resources/public/js/contao-lightbox-gallery-bundle.es6.js', requiresCss: true }
-        legacy:
-            js:
-              - lightbox-gallery
-              - huh_components_glightbox_gallery
-            css:
-              - huh_components_glightbox_gallery
+  encore:
+    entries:
+      - { name: contao-lightbox-gallery-bundle, file: 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/src/Resources/assets/js/contao-lightbox-gallery-bundle.js', requiresCss: true }
+    legacy:
+      js:
+        - lightbox-gallery
+        - huh_components_glightbox_gallery
+      css:
+        - huh_components_glightbox_gallery
