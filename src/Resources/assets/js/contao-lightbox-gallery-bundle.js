@@ -20,9 +20,9 @@ class LightboxGalleryBundle {
                             'href': link.href,
                             'type': 'image'
                         },
-                        caption = link.closest('figure').querySelectorAll('figcaption');
+                        caption = link.closest('figure') !== null ? link.closest('figure').querySelectorAll('figcaption') : '';
 
-                    if (caption.length > 0) {
+                    if (caption !== '') {
                         element.description = caption.html();
                     }
 

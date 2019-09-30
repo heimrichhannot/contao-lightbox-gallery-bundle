@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 2019-09-30
+
+### Fixed
+- figcaption issue
+
 ## [2.0.0] - 2019-03-04
 
 ### Removed
