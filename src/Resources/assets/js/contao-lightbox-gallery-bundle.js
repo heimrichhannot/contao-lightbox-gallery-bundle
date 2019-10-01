@@ -19,11 +19,10 @@ class LightboxGalleryBundle {
                         element = {
                             'href': link.href,
                             'type': 'image'
-                        },
-                        caption = link.closest('figure') !== null ? link.closest('figure').querySelectorAll('figcaption') : '';
+                        };
 
-                    if (caption !== '') {
-                        element.description = caption.html();
+                    if (null !== link.closest('figure') && null !== link.closest('figure').querySelector('figcaption')) {
+                        element.description = link.closest('figure').querySelector('figcaption').innerHTML;
                     }
 
                     if ('undefined' !== typeof link.title && link.title !== '') {
