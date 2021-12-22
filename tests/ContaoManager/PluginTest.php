@@ -53,42 +53,8 @@ class PluginTest extends ContaoTestCase
         static::assertSame([ContaoCoreBundle::class], $bundles[0]->getLoadAfter());
     }
 
-    /**
-     * Test extend configuration.
-     */
-    public function testGetExtensionConfigLoadFilterConfig()
+    public function testRegisterContainerConfiguration(): void
     {
-        $container = new ContainerBuilder($this->mockPluginLoader($this->never()), []);
-        $container->setParameter('kernel.bundles', ['HeimrichHannot\EncoreBundle\HeimrichHannotContaoEncoreBundle']);
-        $container->setParameter('kernel.project_dir', '');
-        $plugin = new Plugin();
 
-        $extensionConfigs = $plugin->getExtensionConfig('huh_encore', [], $container);
-
-        $this->assertNotEmpty($extensionConfigs);
-        $this->assertArrayHasKey('huh', $extensionConfigs);
-        $this->assertArrayHasKey('encore', $extensionConfigs['huh']);
-
-        $this->assertArrayHasKey('entries', $extensionConfigs['huh']['encore']);
-        $this->assertNotEmpty($extensionConfigs['huh']['encore']['entries']);
-
-        $this->assertContains(['name' => 'contao-lightbox-gallery-bundle', 'file' => 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/src/Resources/public/js/contao-lightbox-gallery-bundle.es6.js', 'requiresCss' => true], $extensionConfigs['huh']['encore']['entries']);
-    }
-
-    /**
-     * Mocks the plugin loader.
-     *
-     * @param InvokedCount $expects
-     * @param array        $plugins
-     *
-     * @return PluginLoader|\PHPUnit_Framework_MockObject_MockObject
-     */
-    private function mockPluginLoader(InvokedCount $expects, array $plugins = [])
-    {
-        $pluginLoader = $this->createMock(PluginLoader::class);
-
-        $pluginLoader->expects($expects)->method('getInstancesOf')->with(PluginLoader::EXTENSION_PLUGINS)->willReturn($plugins);
-
-        return $pluginLoader;
     }
 }

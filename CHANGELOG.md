@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2021-12-22
+- Changed: switched from travis to github actions for testing
+- Changed: updated encore integration (minimum allowed encore bundle version is not 1.5)
+
 ## [2.0.2] - 2019-10-01
 
 ### Fixed

@@ -21,27 +21,18 @@
     "satooshi/php-coveralls": "^2.0",
     "symfony/phpunit-bridge": "^3.2"
   },
+  "conflict": {
+    "heimrichhannot/contao-encore-bundle": "<1.5"
+  },
   "autoload": {
     "psr-4": {
       "HeimrichHannot\\LightboxGalleryBundle\\": "src/"
-    },
-    "classmap": [
-      "src/"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/config/",
-      "src/Resources/contao/dca/",
-      "src/Resources/contao/languages/",
-      "src/Resources/contao/templates/"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {
       "HeimrichHannot\\LightboxGalleryBundle\\Test\\": "tests/"
     }
-  },
-  "config": {
-    "preferred-install": "dist"
   },
   "extra": {
     "contao-manager-plugin": "HeimrichHannot\\LightboxGalleryBundle\\ContaoManager\\Plugin",
