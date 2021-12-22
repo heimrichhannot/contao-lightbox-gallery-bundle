@@ -2,8 +2,7 @@
 
 [![](https://img.shields.io/packagist/v/heimrichhannot/contao-lightbox-gallery-bundle.svg)](https://packagist.org/packages/heimrichhannot/contao-lightbox-gallery-bundle)
 [![](https://img.shields.io/packagist/dt/heimrichhannot/contao-lightbox-gallery-bundle.svg)](https://packagist.org/packages/heimrichhannot/contao-lightbox-gallery-bundle)
-
-
+[![CI](https://github.com/heimrichhannot/contao-lightbox-gallery-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/heimrichhannot/contao-lightbox-gallery-bundle/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/heimrichhannot/contao-lightbox-gallery-bundle/badge.svg?branch=master)](https://coveralls.io/github/heimrichhannot/contao-lightbox-gallery-bundle?branch=master)
 
 This bundle offers a contao extension for lightbox-gallery based on mcstudios/glightbox.
