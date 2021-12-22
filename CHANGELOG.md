@@ -1,7 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2021-12-22
+## [2.1.0] - 2021-12-22
+- Changed: allow php 8.0
 - Changed: switched from travis to github actions for testing
 - Changed: updated encore integration (minimum allowed encore bundle version is not 1.5)
 
