@@ -29,7 +29,7 @@ class Plugin implements BundlePluginInterface, ConfigPluginInterface
     public function registerContainerConfiguration(LoaderInterface $loader, array $managerConfig)
     {
         if (class_exists('HeimrichHannot\EncoreBundle\HeimrichHannotContaoEncoreBundle')) {
-            $loader->load('@HeimrichHannotContaoEncoreBundle/Resources/config/config_encore.yml');
+            $loader->load('@HeimrichHannotLightboxGalleryBundle/Resources/config/config_encore.yml');
         }
     }
 }
