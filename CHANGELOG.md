@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [2.2.0] - 2022-04-05
+- Changed: raised minimum php version to 7.4
+- Changed: raised minimum contao version to 4.9
 - Removed: test setup
 - Fixed: added missing license file
 
