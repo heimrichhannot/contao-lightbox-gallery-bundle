@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2022-04-05
+- Removed: test setup
+- Fixed: added missing license file
+
 ## [2.1.0] - 2021-12-22
 - Changed: allow php 8.0
 - Changed: switched from travis to github actions for testing
