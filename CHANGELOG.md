@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.2.1] - 2022-04-05
+- Fixed: autowiring issue
+
 ## [2.2.0] - 2022-04-05
 - Added: dynamically add encore assets on pages with content element or modules where fullsize option is checked
 - Changed: raised minimum php version to 7.4

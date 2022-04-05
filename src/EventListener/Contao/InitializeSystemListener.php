@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Copyright (c) 2022 Heimrich & Hannot GmbH
+ *
+ * @license LGPL-3.0-or-later
+ */
+
 namespace HeimrichHannot\LightboxGalleryBundle\EventListener\Contao;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
@@ -22,10 +28,10 @@ class InitializeSystemListener
 
     public function __invoke(): void
     {
-        if ($this->scopeMatcher->isFrontendRequest($this->requestStack->getCurrentRequest())) {
+        if ($this->requestStack->getCurrentRequest() && $this->scopeMatcher->isFrontendRequest($this->requestStack->getCurrentRequest())) {
             $GLOBALS['TL_JAVASCRIPT']['huh_components_glightbox_gallery'] = 'assets/glightbox-gallery/js/glightbox.min.js|static';
-            $GLOBALS['TL_JAVASCRIPT']['lightbox-gallery']                 = 'bundles/heimrichhannotlightboxgallery/js/contao-lightbox-gallery-bundle.min.js|static';
-            $GLOBALS['TL_CSS']['huh_components_glightbox_gallery']        = 'assets/glightbox-gallery/css/glightbox.min.css|static';
+            $GLOBALS['TL_JAVASCRIPT']['lightbox-gallery'] = 'bundles/heimrichhannotlightboxgallery/js/contao-lightbox-gallery-bundle.min.js|static';
+            $GLOBALS['TL_CSS']['huh_components_glightbox_gallery'] = 'assets/glightbox-gallery/css/glightbox.min.css|static';
         }
     }
 }
