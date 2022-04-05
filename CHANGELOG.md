@@ -2,10 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [2.2.0] - 2022-04-05
+- Added: dynamically add encore assets on pages with content element or modules where fullsize option is checked
 - Changed: raised minimum php version to 7.4
 - Changed: raised minimum contao version to 4.9
+- Changed: use recommend symfony directory structure 
+- Changed: removed utils bundle dependency
 - Removed: test setup
 - Fixed: added missing license file
+- Fixed: deprecations
 
 ## [2.1.0] - 2021-12-22
 - Changed: allow php 8.0

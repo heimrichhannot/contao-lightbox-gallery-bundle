@@ -15,7 +15,7 @@
     "glightbox": "^2.0"
   },
   "scripts": {
-    "build": "babel src/Resources/assets/js --out-dir src/Resources/public/js"
+    "build": "babel assets/js --out-dir public/js"
   },
   "browserslist": [
     "last 2 versions",

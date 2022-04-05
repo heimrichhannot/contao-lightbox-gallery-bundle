@@ -6,8 +6,8 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "contao/core-bundle": "^4.9",
-    "heimrichhannot/contao-utils-bundle": "^2.4",
-    "heimrichhannot-contao-components/glightbox-gallery": "^1.0"
+    "heimrichhannot-contao-components/glightbox-gallery": "^1.0",
+    "symfony/polyfill-php80": "^1.25"
   },
   "conflict": {
     "heimrichhannot/contao-encore-bundle": "<1.5"

@@ -1,7 +1,7 @@
 huh_encore:
   js_entries:
     - name: contao-lightbox-gallery-bundle
-      file: 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/src/Resources/assets/js/contao-lightbox-gallery-bundle.js'
+      file: 'vendor/heimrichhannot/contao-lightbox-gallery-bundle/assets/js/contao-lightbox-gallery-bundle.js'
       requires_css: true
   unset_global_keys:
     js:

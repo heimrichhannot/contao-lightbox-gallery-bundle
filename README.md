@@ -2,18 +2,28 @@
 
 [![](https://img.shields.io/packagist/v/heimrichhannot/contao-lightbox-gallery-bundle.svg)](https://packagist.org/packages/heimrichhannot/contao-lightbox-gallery-bundle)
 [![](https://img.shields.io/packagist/dt/heimrichhannot/contao-lightbox-gallery-bundle.svg)](https://packagist.org/packages/heimrichhannot/contao-lightbox-gallery-bundle)
-[![CI](https://github.com/heimrichhannot/contao-lightbox-gallery-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/heimrichhannot/contao-lightbox-gallery-bundle/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/heimrichhannot/contao-lightbox-gallery-bundle/badge.svg?branch=master)](https://coveralls.io/github/heimrichhannot/contao-lightbox-gallery-bundle?branch=master)
 
 This bundle offers a contao extension for lightbox-gallery based on mcstudios/glightbox.
 
-## Usage
+## Install
 
 Install with composer or contao manger:
 
 ```
 composer require heimrichhannot/contao-lightbox-gallery-bundle
 ```
+
+## Usage
+
+This bundle works out-of-the-box with contao galleries. 
+
+### Encore bundle
+
+If you're using this bundle with encore bundle, assets are blocked by default.
+For content elements where fullsize option is checked, the assets are added automatically.
+
+
+### Extended usage
 
 To add images to an gallery define an unique data lightbox id for the elements.
 Each a tag must have the same data lightbox id to be in the same gallery.

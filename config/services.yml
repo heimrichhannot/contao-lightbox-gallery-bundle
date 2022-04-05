@@ -1,0 +1,5 @@
+services:
+  HeimrichHannot\LightboxGalleryBundle\:
+    resource: '../src/{EventListener}/*'
+    autowire: true
+    autoconfigure: true

@@ -8,16 +8,12 @@
 
 namespace HeimrichHannot\LightboxGalleryBundle;
 
-use HeimrichHannot\LightboxGalleryBundle\DependencyInjection\LightboxGalleryExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class HeimrichHannotLightboxGalleryBundle extends Bundle
 {
-    /**
-     * @return LightboxGalleryExtension
-     */
-    public function getContainerExtension()
+    public function getPath(): string
     {
-        return new LightboxGalleryExtension();
+        return \dirname(__DIR__);
     }
 }
