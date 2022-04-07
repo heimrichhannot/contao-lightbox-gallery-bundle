@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.2.2] - 2022-04-07
+- Fixed: exception on console commands
+
 ## [2.2.1] - 2022-04-05
 - Fixed: autowiring issue
 

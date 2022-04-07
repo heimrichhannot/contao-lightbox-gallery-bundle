@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Copyright (c) 2022 Heimrich & Hannot GmbH
+ *
+ * @license LGPL-3.0-or-later
+ */
+
 namespace HeimrichHannot\LightboxGalleryBundle\EventListener\Contao;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
@@ -29,18 +35,19 @@ class ParseTemplateListener implements ServiceSubscriberInterface
 
     public function __invoke(Template $template): void
     {
-        if (!$this->container->has(FrontendAsset::class)
+        if (!$this->requestStack->getCurrentRequest()
+            || !$this->container->has(FrontendAsset::class)
             || !$template instanceof FrontendTemplate
             || !$this->scopeMatcher->isFrontendRequest($this->requestStack->getCurrentRequest())) {
             return;
         }
-        $templateName = ($template->getName() === 'twig_template_proxy' ? $template->twig_template : $template->getName());
+        $templateName = ('twig_template_proxy' === $template->getName() ? $template->twig_template : $template->getName());
 
         if (!str_starts_with($templateName, 'mod_') && !str_starts_with($templateName, 'ce_')) {
             return;
         }
 
-        $templateData = (object)($template->getName() === 'twig_template_proxy' ? $template->twig_context : $template->getData());
+        $templateData = (object) ('twig_template_proxy' === $template->getName() ? $template->twig_context : $template->getData());
 
         if ($templateData->fullsize) {
             $this->container->get(FrontendAsset::class)->addActiveEntrypoint('contao-lightbox-gallery-bundle');
@@ -50,7 +57,7 @@ class ParseTemplateListener implements ServiceSubscriberInterface
     public static function getSubscribedServices()
     {
         return [
-            '?'.FrontendAsset::class
+            '?'.FrontendAsset::class,
         ];
     }
 }
