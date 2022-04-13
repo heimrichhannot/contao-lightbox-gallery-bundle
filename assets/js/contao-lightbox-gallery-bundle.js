@@ -27,6 +27,7 @@ class LightboxGalleryBundle {
 
                     if ('undefined' !== typeof link.title && link.title !== '') {
                         element.title = link.title;
+                        element.alt = link.title;
                     }
 
                     gallery.push(element);

@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2022-04-13
+- Updated: Glightbox version
+- Added: alt attribute to slide
+
 ## [2.2.2] - 2022-04-07
 - Fixed: exception on console commands
 
