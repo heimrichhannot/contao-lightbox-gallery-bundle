@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.3.1] - 2022-08-15
+- Fixed: missing check if encore bundle is installed
+- Fixed: possible warning in php 8
+
 ## [2.3.0] - 2022-04-13
 - Updated: Glightbox version
 - Added: alt attribute to slide

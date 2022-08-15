@@ -36,6 +36,7 @@ class ParseTemplateListener implements ServiceSubscriberInterface
     public function __invoke(Template $template): void
     {
         if (!$this->requestStack->getCurrentRequest()
+            || !class_exists(FrontendAsset::class)
             || !$this->container->has(FrontendAsset::class)
             || !$template instanceof FrontendTemplate
             || !$this->scopeMatcher->isFrontendRequest($this->requestStack->getCurrentRequest())) {
@@ -49,7 +50,7 @@ class ParseTemplateListener implements ServiceSubscriberInterface
 
         $templateData = (object) ('twig_template_proxy' === $template->getName() ? $template->twig_context : $template->getData());
 
-        if ($templateData->fullsize) {
+        if ($templateData->fullsize ?? false) {
             $this->container->get(FrontendAsset::class)->addActiveEntrypoint('contao-lightbox-gallery-bundle');
         }
     }
