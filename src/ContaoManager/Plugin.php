@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2019 Heimrich & Hannot GmbH
+ * Copyright (c) 2023 Heimrich & Hannot GmbH
  *
  * @license LGPL-3.0-or-later
  */
@@ -23,15 +23,13 @@ class Plugin implements BundlePluginInterface, ConfigPluginInterface
      */
     public function getBundles(ParserInterface $parser)
     {
-        return [BundleConfig::create(HeimrichHannotLightboxGalleryBundle::class)->setLoadAfter([ContaoCoreBundle::class])];
+        return [
+            BundleConfig::create(HeimrichHannotLightboxGalleryBundle::class)->setLoadAfter([ContaoCoreBundle::class]),
+        ];
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader, array $managerConfig)
     {
-        if (class_exists('HeimrichHannot\EncoreBundle\HeimrichHannotContaoEncoreBundle')) {
-            $loader->load('@HeimrichHannotLightboxGalleryBundle/config/config_encore.yml');
-        }
-
         $loader->load('@HeimrichHannotLightboxGalleryBundle/config/services.yml');
     }
 }

@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.4.0] - 2023-05-24
+- Added: support for encore contracts
+
 ## [2.3.1] - 2022-08-15
 - Fixed: missing check if encore bundle is installed
 - Fixed: possible warning in php 8

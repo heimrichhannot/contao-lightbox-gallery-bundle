@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2022 Heimrich & Hannot GmbH
+ * Copyright (c) 2023 Heimrich & Hannot GmbH
  *
  * @license LGPL-3.0-or-later
  */
@@ -12,19 +12,19 @@ use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\FrontendTemplate;
 use Contao\Template;
-use HeimrichHannot\EncoreBundle\Asset\FrontendAsset;
+use HeimrichHannot\EncoreContracts\PageAssetsTrait;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Contracts\Service\ServiceSubscriberInterface;
 
 /**
  * @Hook("parseTemplate")
  */
-class ParseTemplateListener implements ServiceSubscriberInterface
+class ParseTemplateListener
 {
+    use PageAssetsTrait;
+
     private RequestStack       $requestStack;
     private ScopeMatcher       $scopeMatcher;
-    private ContainerInterface $container;
 
     public function __construct(ContainerInterface $container, RequestStack $requestStack, ScopeMatcher $scopeMatcher)
     {
@@ -35,13 +35,11 @@ class ParseTemplateListener implements ServiceSubscriberInterface
 
     public function __invoke(Template $template): void
     {
-        if (!$this->requestStack->getCurrentRequest()
-            || !class_exists(FrontendAsset::class)
-            || !$this->container->has(FrontendAsset::class)
-            || !$template instanceof FrontendTemplate
-            || !$this->scopeMatcher->isFrontendRequest($this->requestStack->getCurrentRequest())) {
+        $request = $this->requestStack->getCurrentRequest();
+        if (!$request || !$this->scopeMatcher->isFrontendRequest($request) || !$template instanceof FrontendTemplate) {
             return;
         }
+
         $templateName = ('twig_template_proxy' === $template->getName() ? $template->twig_template : $template->getName());
 
         if (!str_starts_with($templateName, 'mod_') && !str_starts_with($templateName, 'ce_')) {
@@ -51,14 +49,7 @@ class ParseTemplateListener implements ServiceSubscriberInterface
         $templateData = (object) ('twig_template_proxy' === $template->getName() ? $template->twig_context : $template->getData());
 
         if ($templateData->fullsize ?? false) {
-            $this->container->get(FrontendAsset::class)->addActiveEntrypoint('contao-lightbox-gallery-bundle');
+            $this->addPageEntrypoint('contao-lightbox-gallery-bundle');
         }
-    }
-
-    public static function getSubscribedServices()
-    {
-        return [
-            '?'.FrontendAsset::class,
-        ];
     }
 }
