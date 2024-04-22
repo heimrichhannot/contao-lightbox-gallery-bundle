@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.4.1] - 2024-04-21
+- Changed: pin glightbox version to 3.2.0 (3.3.0 has error)
+
 ## [2.4.0] - 2023-05-24
 - Added: support for encore contracts
 
