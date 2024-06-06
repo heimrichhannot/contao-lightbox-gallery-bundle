@@ -43,3 +43,6 @@ class LightboxGalleryBundle {
 }
 
 document.addEventListener('DOMContentLoaded', LightboxGalleryBundle.onReady, true);
+
+window.LightboxGalleryBundle = LightboxGalleryBundle;
+export default LightboxGalleryBundle;

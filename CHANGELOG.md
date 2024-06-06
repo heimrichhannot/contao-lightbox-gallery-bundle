@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.4.2] - 2024-06-06
+- Changed: export lightbox js class
+
 ## [2.4.1] - 2024-04-21
 - Changed: pin glightbox version to 3.2.0 (3.3.0 has error)
 
